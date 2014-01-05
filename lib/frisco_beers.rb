@@ -8,7 +8,7 @@ module Frisco
 
     beers = []
     page = spider.get('http://friscogrille.com/beers.php')
-    page.search('#keg-beers li').each do |beer|
+    page.search('#keg-beers > ul li').each do |beer|
       beers << beer.text
     end
 
